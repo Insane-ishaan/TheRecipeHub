@@ -85,6 +85,13 @@ body{
     border-radius: 50%;
 }
 
+@media (max-width:320px) {
+    .nav-visuals{
+        display: none;
+    }   
+}
+
+
 /*STYLING SHOW(DETAIL) ROUTE CARD*/
 .detail-img{ 
     width: 100% !important;
