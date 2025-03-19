@@ -1,0 +1,56 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+  <form method="get" action="/card/<%=getDataToBeEdit._id%>">
+    <button style="background-color: transparent; border: none;"><i class="fa-solid fa-rotate-left"></i></button>
+  </form>
+    <div class="row">
+        <div class="col col-10 offset-1">
+    <form method="post" action="/card/<%=getDataToBeEdit._id%>?_method=PUT" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="form-floating mb-3">
+            <input type="text"  name="card[dishname]"  class="form-control" id="floatingInput" value="<%=getDataToBeEdit.dishname%>" required> 
+            <label for="floatingInput">Dish Name</label>
+            <div class="valid-feedback">Valid Dish Name</div>
+            <div class="invalid-feedback">Enter Valid Dish Name</div>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control"  name="card[msg]" id="floatingTextarea2" style="height: 100px" required><%=getDataToBeEdit.msg%></textarea>
+            <label for="floatingTextarea2">Description</label>
+            <div class="valid-feedback">Valid Description</div>
+            <div class="invalid-feedback">Enter Valid Description</div>
+          </div>
+          <div class="input-group mb-3">
+            <img src="<%=modifyImg%>" >
+          </div>
+          <div class="input-group mb-3">
+            <input type="file"  name="card[avtar]" class="form-control">
+          </div>
+          <div class="row">
+            <div class="form-floating mb-3 col-6">
+              <input type="text" name="card[protein]" class="form-control" id="floatingPassword" value="<%=getDataToBeEdit.protein%>" required>
+              <label for="floatingPassword">Protien</label>
+              <div class="valid-feedback">Valid</div>
+              <div class="invalid-feedback">Enter Valid Amount of Protien</div>
+            </div>
+            <div class="form-floating mb-3 col-6">
+              <input type="text" name="card[duration]" class="form-control" id="floatingPassword" value="<%=getDataToBeEdit.duration%>" required>
+              <label for="floatingPassword">Duration</label>
+              <div class="valid-feedback">Valid</div>
+              <div class="invalid-feedback">Enter Valid Duration</div>
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control"  name="card[Ing]" id="floatingTextarea2" style="height: 100px"><%=getDataToBeEdit.Ing%></textarea>
+            <label for="floatingTextarea2">Recipe</label>
+            <div class="valid-feedback">Valid</div>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control"  name="card[req]" id="floatingTextarea2" style="height: 100px"><%=getDataToBeEdit.req%></textarea>
+            <label for="floatingTextarea2">Requirements</label>
+            <div class="valid-feedback">Valid</div>
+          </div>
+        <button class="btn btn-success mb-4">submit</button>
+    </form>
+</div>
+</div>
+</body>
+</html>

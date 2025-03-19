@@ -1,0 +1,21 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+    <form method="post" action="/signup" novalidate class="needs-validation">
+        <div class="row offset-2">
+          <h2>SignUp to The<span style="color: rgb(172, 29, 29)">R</span>ecipeHub</h2>
+            <div class="form-floating col-9 mb-3">
+              <input type="text" class="form-control" name="username" id="floatingInput" required/>
+              <label for="floatingInput">User Name</label>
+            </div>
+            <div class="form-floating col-9 mb-3">
+                <input type="text" class="form-control" name="email" id="floatingInput" required/>
+                <label for="floatingInput">Email</label>
+              </div>
+              <div class="form-floating col-9 mb-3">
+                <input type="password" class="form-control" name="password" id="floatingInput" required/>
+                <label for="floatingInput">Password</label>
+              </div>
+        </div>
+        <button class="btn btn-outline-success offset-2 me-2">Signup</button>
+    </form>
+</body>

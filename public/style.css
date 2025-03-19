@@ -1,0 +1,150 @@
+body{
+    font-family: "Plus Jakarta Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh !important;
+}
+
+.container{
+    flex-grow: 1 !important;
+}
+
+/*STYLING FOR CARDS*/
+.card-div{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.card{
+    border: none !important;
+    background-color: rgb(244, 236, 236);
+    display: flex;
+    width: 22rem;
+}
+
+.card img{
+    height: 15rem;
+    transition: 0.3s;
+}
+
+.card img:hover{
+    opacity: 0.8;
+    border-radius: 12px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.anchor-card{
+    text-decoration: none;
+}
+
+
+/*This is tranform property which gradually increase size of currently selected card*/
+/* .index-page-cards{
+    transition: 0.2s;
+}
+
+.index-page-cards:hover{
+    transform: scale(1.1);
+} */
+
+/*STYLING FOR NAAVBAR*/
+#main-nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffeded;
+    height: 4rem;
+    
+}
+
+.navbar-brand{
+    font-size: 2rem;
+}
+
+.nav-link {
+    font-size: 1.2em;
+}
+
+.nav-anime{
+    width: 1rem;
+}
+.new-recipe-btn{
+    transition: 0.2s;
+}
+
+.new-recipe-btn:hover{
+    border-radius: 50%;
+}
+
+/*STYLING SHOW(DETAIL) ROUTE CARD*/
+.detail-img{ 
+    width: 100% !important;
+}
+
+.recipe-card {
+    border: 2px !important;
+    background-color: aliceblue;
+    position: absolute;
+    right: 31rem;
+}
+
+.require-card{
+    position: absolute;
+    right: 8rem;
+    bottom: 10rem;
+}
+
+
+/* form .detail-route-form{
+    display: inline-block\ !important;
+} */
+
+
+/* /*STYLING BACKWARD SLASH LOCATED ON TOP RIGHT CORNER*/
+.fa-rotate-left{
+    font-size: 1.6rem;
+    position: absolute;
+    left: 1rem;
+    top: 5.5rem;   
+}
+
+/*STYLING FOR FOOTER AND ITS ICON*/
+.footer{
+    height: 8rem !important;
+    background-color: #ffeded;
+    width: 100vw !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icons,.branding,.helpline{
+    width: 100%;
+    align-content: space-evenly;
+    text-align: center;
+}
+
+.footer-social-meadia-icon{
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.branding{
+    margin-top: 0.5rem;
+}
+
+.footer-social-meadia-icon:hover{
+    opacity: 1;
+}

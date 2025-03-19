@@ -1,0 +1,29 @@
+<% layout('/layouts/boilerplate') -%>
+</style>
+<body>
+  <div class="parent-div row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 mt-4">
+    <% for(let data of allData){ %>
+    <a class="anchor-card" href="/card/<%=data._id%>">
+      <div class="card-div mb-5 index-page-cards">
+        <div class="card">
+          <img src="<%=data.avtar.url%>" class="card-img-top" alt="Card-Img" />
+          <div class="card-body">
+            <h5 class="card-title"><%=data.dishname%></h5>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">
+              <b>Chef</b> : <%=data.chef.username%>
+            </h6> -->
+            <p class="card-text"><%=data.msg%></p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <b>Protein</b> : <%=data.protein%> gm
+              </li>
+              <li class="list-group-item"><%=data.date.toString().split(" ").splice(0,4).join(" ")%> 
+                <li class="list-group-item"><b>Create_at</b> : <%=data.date.toString().split(" ")[4]%> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </a>
+    <%}%>
+  </div>
+</body>

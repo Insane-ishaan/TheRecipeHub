@@ -1,0 +1,53 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+  <form method="get" action="/card">
+    <button style="background-color: transparent; border: none;"><i class="fa-solid fa-rotate-left"></i></button>
+  </form>
+  <div class="row">
+    <div class="col  offset-2 col-8">
+        <h1>Create New Card</h1>
+    <form method="post" action="/card" novalidate class="needs-validation" enctype="multipart/form-data">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="card[dishname]" id="floatingInput" required/>
+            <label for="floatingInput">Dish Name</label>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Enter Valid Dish Name</div>
+          </div>
+      <div class="input-group mb-3">
+      <input type="file" class="form-control"  name="card[avtar]" required/>
+      <div class="valid-feedback">Valid</div>
+      <div class="invalid-feedback">Required</div>
+      </div>
+      <div class="form-floating mb-3">
+        <input  type="text"  class="form-control" name="card[protein]" id="floatingInput"  required />
+        <label for="floatingInput">Total Amount of protein</label>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">Enter Valid Amount of Protein</div>
+      </div>
+      <div class="form-floating mb-3">
+        <input  type="text"  class="form-control" name="card[duration]" id="floatingInput"  required />
+        <label for="floatingInput">Total Amount of Time</label>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">Enter Valid Amount of Time</div>
+      </div>
+      <div class="form-floating mb-3">
+        <textarea  class="form-control"  id="floatingTextarea2" style="height: 100px" name="card[msg]"  required></textarea>
+        <label for="floatingTextarea2">Description</label>
+        <div class="valid-feedback">Catchy Description</div>
+        <div class="invalid-feedback">Enter Valid Description</div>
+      </div>
+      <div class="form-floating mb-3">
+        <textarea  class="form-control" id="floatingTextarea2" style="height: 100px" name="card[Ing]" ></textarea>
+        <label for="floatingTextarea2">Recipe</label>
+        <div class="valid-feedback">Enter Recipe For Extra Edge</div>
+      </div>
+      <div class="form-floating mb-3">
+        <textarea  class="form-control" id="floatingTextarea2" name="card[req]" ></textarea>
+        <label for="floatingTextarea2">Requirements</label>
+        <div class="valid-feedback">Also Enter Requirements For Ease</div>
+      </div>
+      <button class="btn btn-outline-success mb-5">add</button>
+    </form>
+  </div>
+</div>
+</body>
