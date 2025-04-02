@@ -1,55 +1,54 @@
-body{
-    font-family: "Plus Jakarta Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh !important;
+body {
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh !important;
 }
 
-.container{
-    flex-grow: 1 !important;
+.container {
+  flex-grow: 1 !important;
 }
 
 /*STYLING FOR CARDS*/
-.card-div{
-    display: flex !important;
-    justify-content: center !important;
+.card-div {
+  display: flex !important;
+  justify-content: center !important;
 }
 
-.card{
-    border: none !important;
-    background-color: rgb(244, 236, 236);
-    display: flex;
-    flex-wrap: wrap;
-    flex-shrink: 1;
-    width: 22rem;
-    max-width: 40rem;
-    height: auto;
+.card {
+  border: none !important;
+  background-color: rgb(244, 236, 236);
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  width: 22rem;
+  max-width: 40rem;
+  height: auto;
 }
 
-.card img{
-    height: 15rem;
-    transition: 0.3s;
+.card img {
+  height: 15rem;
+  transition: 0.3s;
 }
 
-.card img:hover{
-    opacity: 0.8;
-    border-radius: 12px;
+.card img:hover {
+  opacity: 0.8;
+  border-radius: 12px;
 }
 
-.card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
-.anchor-card{
-    text-decoration: none;
+.anchor-card {
+  text-decoration: none;
 }
-
 
 /*This is tranform property which gradually increase size of currently selected card*/
 /* .index-page-cards{
@@ -61,149 +60,147 @@ body{
 } */
 
 /*STYLING FOR NAAVBAR*/
-#main-nav{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #ffeded;
-    height: 4rem;
-    
+#main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffeded;
+  height: 4rem;
 }
 
-.navbar-brand{
-    font-size: 2rem;
+.navbar-brand {
+  font-size: 2rem;
 }
 
 .nav-link {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
-.nav-anime{
-    width: 1rem;
+.nav-anime {
+  width: 1rem;
 }
-.new-recipe-btn{
-    transition: 0.2s;
-}
-
-.new-recipe-btn:hover{
-    border-radius: 50%;
+.new-recipe-btn {
+  transition: 0.2s;
 }
 
-@media (max-width:320px) {
-    .nav-visuals{
-        display: none;
-    }   
+.new-recipe-btn:hover {
+  border-radius: 50%;
 }
 
+@media (max-width: 990px) {
+  .container-fluid {
+    background-color: #ffeded !important;
+  }
+  #nav-icon {
+    display: none !important;
+  }
+}
 
 /*STYLING SHOW(DETAIL) ROUTE CARD*/
-.detail-img{ 
-    width: 100% !important;
+.detail-img {
+  width: 100% !important;
 }
 
-.detail-card{
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 100px;
-    border: 2px solid #e47b3e!important; 
+.detail-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100px;
+  border: 2px solid #e47b3e !important;
 }
 
 .recipe-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100px;
+  border: 2px solid #2aa9dc !important;
+  background-color: aliceblue;
+  position: relative;
+  max-height: 500px;
+  height: auto !important;
+  right: 5rem;
+  left: 2rem;
+}
+
+.require-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  flex: 1 1 100px;
+  max-height: 500px;
+  height: auto !important;
+  border: 2px solid #b9c43bac !important;
+  position: relative;
+  left: 2rem;
+}
+
+@media (max-width: 400px) {
+  .detail-parent-div {
     display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 100px;
-    border: 2px solid #2aa9dc!important; 
-    background-color: aliceblue;
-    position: relative;
-    max-height: 500px;
-    height: auto !important;
-    right: 2rem;
-    left: 2rem;
+    flex-direction: column;
+    align-items: normal;
+    margin: 0 auto !important;
+  }
+  .review-input-div {
+    width: 20rem;
+  }
 }
 
-.require-card{
+@media (min-width: 400px) and (max-width: 993px) {
+  .detail-parent-div {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center !important;
-    flex: 1 1 100px;
-    max-height: 500px;
-    height: auto !important;
-    border: 2px solid #b9c43bac!important; 
-    position: relative;
-    left: 3rem;
-
+    flex-direction: column;
+  }
+  .recipe-card .require-card {
+    display: flex !important;
+  }
+  .review-input-div {
+    width: 40rem;
+  }
 }
-
-@media (max-width:400px) {
-    .detail-parent-div{
-        display: flex;
-        flex-direction: column;
-        align-items: normal;
-        margin: 0 auto !important;
-    }
-    .review-input-div{
-        width: 20rem;
-    }
-}
-
-@media (min-width:400px) and (max-width:993px) {
-    .detail-parent-div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .recipe-card  .require-card{
-        display: flex !important;
-    }
-    .review-input-div{
-        width: 40rem;
-    }
-}
-
-
-
 
 /* form .detail-route-form{
     display: inline-block\ !important;
 } */
 
-
 /* /*STYLING BACKWARD SLASH LOCATED ON TOP RIGHT CORNER*/
-.fa-rotate-left{
-    font-size: 1.6rem;
-    position: absolute;
-    left: 1rem;
-    top: 5.5rem;   
+.fa-rotate-left {
+  font-size: 1.6rem;
+  position: absolute;
+  left: 1rem;
+  top: 5.5rem;
 }
 
 /*STYLING FOR FOOTER AND ITS ICON*/
-.footer{
-    height: 8rem !important;
-    background-color: #ffeded;
-    width: 100vw !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
+.footer {
+  height: 8rem !important;
+  background-color: #ffeded;
+  width: 100vw !important;
+  margin-left: 0px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.icons,.branding,.helpline{
-    width: 100%;
-    align-content: space-evenly;
-    text-align: center;
+.icons,
+.branding,
+.helpline {
+  width: 100% !important;
+  align-content: space-evenly;
+  text-align: center;
 }
 
-.footer-social-meadia-icon{
-    margin-right: 1rem;
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
-    opacity: 0.9;
+.footer-social-meadia-icon {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
-.branding{
-    margin-top: 0.5rem;
+.branding {
+  margin-top: 0.5rem;
 }
 
-.footer-social-meadia-icon:hover{
-    opacity: 1;
+.footer-social-meadia-icon:hover {
+  opacity: 1;
 }
