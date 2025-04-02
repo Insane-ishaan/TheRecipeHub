@@ -115,7 +115,7 @@ body {
   border: 2px solid #2aa9dc !important;
   background-color: aliceblue;
   position: relative;
-  max-height: 500px;
+  max-height: 1000px;
   height: auto !important;
   right: 5rem;
   left: 2rem;
@@ -124,9 +124,8 @@ body {
 .require-card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center !important;
   flex: 1 1 100px;
-  max-height: 500px;
+  max-height: 1000px;
   height: auto !important;
   border: 2px solid #b9c43bac !important;
   position: relative;
